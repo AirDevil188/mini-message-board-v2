@@ -21,4 +21,13 @@ const message_controller_index_get = asyncHandler(async (req, res, next) => {
   res.render("index", { title: "Mini Messageboard", messages: messages });
 });
 
-module.exports = { message_controller_index_get };
+const message_controller_new_message_get = asyncHandler(
+  async (req, res, next) => {
+    res.render("form", { title: "Post a new message" });
+  }
+);
+
+module.exports = {
+  message_controller_index_get,
+  message_controller_new_message_get,
+};
