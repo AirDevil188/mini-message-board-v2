@@ -2,7 +2,12 @@
   <body>
     <section class="messages-section">
       <% messages.map((message) => { %>
-      <li><%= message.text %></li> <% }) %></li>
+      <div class="message-container">
+        <p><%= message.user %></p>
+        <p><%= message.text %></p>
+        <output><%= message.time %></output>
+      </div>
+      <% }) %>
     </section>
   </body>
 </html>
