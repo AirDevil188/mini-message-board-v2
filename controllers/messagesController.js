@@ -27,7 +27,19 @@ const message_controller_new_message_get = asyncHandler(
   }
 );
 
+const message_controller_new_message_post = asyncHandler(
+  async (req, res, next) => {
+    messages.push({
+      text: req.body.text,
+      user: req.body.username,
+      time: new Date(),
+    });
+    res.redirect("/");
+  }
+);
+
 module.exports = {
   message_controller_index_get,
   message_controller_new_message_get,
+  message_controller_new_message_post,
 };
