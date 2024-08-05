@@ -1,7 +1,7 @@
 <html>
   <body>
     <section class="messages-section">
-      <% messages.map((message) => { %>
+      <% if (messages) { %> <% messages.map((message) => { %>
       <div class="message-container">
         <p><%= message.user %></p>
         <p><%= message.text %></p>
@@ -10,7 +10,9 @@
           <a href="message/<%= message.id %>">Message details</a>
         </button>
       </div>
-      <% }) %>
+      <% }) %> <% } else { %>
+      <p>There are no messages!</p>
+      <% } %>
     </section>
   </body>
 </html>
