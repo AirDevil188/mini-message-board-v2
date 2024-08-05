@@ -44,7 +44,7 @@ const message_controller_new_message_post = asyncHandler(
 );
 
 const message_controller_details_get = asyncHandler(async (req, res, next) => {
-  const message = messages.find((message) => (message.id = req.params.id));
+  const message = messages.find((message) => message.id === req.params.id);
   res.render("message-detail", { title: "Message detail", message: message });
 });
 
