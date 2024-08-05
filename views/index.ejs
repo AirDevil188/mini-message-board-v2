@@ -6,6 +6,9 @@
         <p><%= message.user %></p>
         <p><%= message.text %></p>
         <output><%= message.time %></output>
+        <button type="button">
+          <a href="message/<%= message.id %>">Message details</a>
+        </button>
       </div>
       <% }) %>
     </section>
