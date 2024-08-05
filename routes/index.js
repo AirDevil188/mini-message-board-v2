@@ -15,4 +15,9 @@ indexController.post(
   messagesController.message_controller_new_message_post
 );
 
+indexController.get(
+  "/message/:id",
+  messagesController.message_controller_details_get
+);
+
 module.exports = indexController;
