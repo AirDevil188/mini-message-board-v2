@@ -1,18 +1,16 @@
 <html>
   <body>
     <section class="message-detail-section">
-      <div class="message-user-container">
-        <p><%=message.user %></p>
-      </div>
-      <div class="message-text-container">
+      <% if (message) { %> <% message.map((message) => { %>
+      <div class="message-container">
+        <p><%= message.username %></p>
         <p><%= message.text %></p>
+        <output><%= message.time %></output>
+        <button type="button">
+          <a href="/">Go Back to Homepage</a>
+        </button>
       </div>
-      <div class="message-date-container">
-        <output><%= message.time %> </output>
-      </div>
-      <div class="button-container">
-        <button type="button"><a href="/">GO BACK TO HOMEPAGE</a></button>
-      </div>
+      <% }) } %>
     </section>
   </body>
 </html>

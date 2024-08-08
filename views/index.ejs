@@ -1,9 +1,9 @@
 <html>
   <body>
     <section class="messages-section">
-      <% if (messages) { %> <% messages.map((message) => { %>
+      <% if (messages.length !== 0) { %> <% messages.map((message) => { %>
       <div class="message-container">
-        <p><%= message.user %></p>
+        <p><%= message.username %></p>
         <p><%= message.text %></p>
         <output><%= message.time %></output>
         <button type="button">
@@ -13,6 +13,9 @@
       <% }) %> <% } else { %>
       <p>There are no messages!</p>
       <% } %>
+    </section>
+    <section class="create-new-message">
+      <li><a href="/new">Create New Message</a></li>
     </section>
   </body>
 </html>
