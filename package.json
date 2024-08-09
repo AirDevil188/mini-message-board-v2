@@ -4,16 +4,17 @@
   "description": "Mini Message Board project for \"The Odin Project\" as a part of the new Node revamp",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node db/populatedb.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-async-handler": "^1.2.0",
-    "pg": "^8.12.0",
-    "uuid": "^10.0.0"
+    "pg": "^8.12.0"
   }
 }
