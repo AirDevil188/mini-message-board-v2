@@ -2,7 +2,6 @@ const pool = require("../db/pool");
 
 async function messagesGet() {
   const { rows } = await pool.query("SELECT * FROM messages");
-  console.log(rows, "rows");
   return rows;
 }
 
