@@ -22,7 +22,6 @@ const message_controller_new_message_post = asyncHandler(
 
 const message_controller_details_get = asyncHandler(async (req, res, next) => {
   const message = await db.detailMessage(req.params.id);
-  console.log(message);
   res.render("message-detail", { title: "Message detail", message: message });
 });
 
